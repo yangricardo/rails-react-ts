@@ -3,8 +3,8 @@ version: '3'
 services:
   postgres:
     image: postgres:15.3-alpine3.18    
-    container_name: postgres.assinadorbr
-    hostname: postgres.assinadorbr
+    container_name: postgres.ror
+    hostname: postgres.ror
     restart: unless-stopped
     command: -p 5432
     ports:
@@ -15,3 +15,12 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+
+  redis:
+    image: redis:6.0-alpine3.18
+    container_name: postgres.ror
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=redis # Replace with your desired password
