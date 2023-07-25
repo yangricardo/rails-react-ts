@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:15.3-alpine3.18    
+    container_name: postgres.assinadorbr
+    hostname: postgres.assinadorbr
+    restart: unless-stopped
+    command: -p 5432
+    ports:
+      - '5432:5432'
+    volumes:
+      - .postgresql/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
