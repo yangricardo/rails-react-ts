@@ -7,14 +7,6 @@ Things you may want to cover:
 
 * Ruby version
 
-  * ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]
-    * `asdf plugin add ruby`
-    * `asdf install ruby latest`
-    * `asdf global ruby latest`
-
-  * Rails 7.0.6
-    * `gem install ruby`
-
 * System dependencies
 
 * Configuration
